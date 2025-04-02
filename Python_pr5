@@ -1,0 +1,30 @@
+def cooling_system():
+    temperature = float(input("Введіть температуру (в градусах С): "))
+    humidity = float(input("Введіть відносну вологість (%): "))
+
+    if temperature > 30 and humidity > 70:
+        print("Активація системи охолодження!")
+    else:
+        print("Умови нормальні!")
+
+def check_num():
+    num = int(input("Введіть число для перевірки: "))
+
+    if 1 <= num <= 100:
+        print("Число в межах 1-100!")
+    else:
+        print("Помилка! Число знаходиться не в межах 1-100!")
+
+def choice_candidate():
+    age = int(input("Введіть вік кандидата: "))
+    experience = int(input("Введіть досвід роботи кандидата :"))
+    qualification = input("Чи має кандидат кваліфікацію? (True/False): ").strip().lower() == "true"
+
+    if 25 <= age <= 50 and (experience >= 3 or qualification):
+        print("Кандидат відповідає вимогам")
+    else:
+        print("Кандидат не відповідає вимогам")
+
+cooling_system()
+check_num()
+choice_candidate()
